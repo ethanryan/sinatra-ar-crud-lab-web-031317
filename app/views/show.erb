@@ -1,0 +1,13 @@
+<h1> Show Page </h1>
+
+<form action="/posts/<%=@post.id%>/delete" method="post">
+<input id="hidden" type="hidden" name="_method" value="delete">
+
+<h3><%=@post.name%></h3>
+<%=@post.content%>
+<br>
+<br>
+<input type="submit" name="delete" value="delete">
+  </form>
+
+<h3><%=@post.name%> SHOW PAGE (with delete option)</h3>

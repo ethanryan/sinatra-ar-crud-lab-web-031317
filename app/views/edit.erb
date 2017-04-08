@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Post Page</title>
+  </head>
+  <body>
+    hello edit page
+    <br>
+
+    <%=@post.name %>
+    <%=@post.content %>
+
+
+<form action="/posts/<%=@post.id %>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+    <br><br>
+    Edit Blog Name: <input id="name" type="string" name="edit_name"></input>
+    <br><br>
+    Edit Blog Content:
+    <br>
+    <textarea id="content" type="string" name="edit_content"></textarea>
+    <br><br>
+    <input id="submit" type="submit" value="submit">
+  </form>
+
+  </body>
+</html>
